@@ -1,0 +1,78 @@
+Hound - Information Gathering Report
+------------------------------------
+
+Device Information
+----------------------------
+User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0 
+Platform: Linux x86_64 
+Cookies Enabled: true
+Browser Language: en-US
+Browser Name: Netscape
+Browser CodeName: Mozilla
+RAM: undefined
+CPU Cores: 8
+Screen Width: 1920
+Screen Height: 1080
+Local Time: 4:37:36 PM
+RefUrl: 
+OS CPU: Linux x86_64
+-------------------------
+
+Target IP Detail
+----------------
+IP: 213.230.74.94
+---------------
+Hound - Information Gathering Report
+------------------------------------
+
+Device Information
+----------------------------
+User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 (+cloudflare.com) 
+Platform: Linux x86_64 
+Cookies Enabled: true
+Browser Language: en-US
+Browser Name: Netscape
+Browser CodeName: Mozilla
+RAM: 8
+CPU Cores: 8
+Screen Width: 800
+Screen Height: 600
+Local Time: 8:37:39 PM
+RefUrl: 
+OS CPU: undefined
+-------------------------
+
+User denied the Geolocation permision.
+
+Target IP Detail
+----------------
+IP: 34.83.203.92
+---------------
+Hound - Information Gathering Report
+------------------------------------
+
+Device Information
+----------------------------
+User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 (+cloudflare.com) 
+Platform: Linux x86_64 
+Cookies Enabled: true
+Browser Language: en-US
+Browser Name: Netscape
+Browser CodeName: Mozilla
+RAM: 8
+CPU Cores: 8
+Screen Width: 800
+Screen Height: 600
+Local Time: 8:37:40 PM
+RefUrl: 
+OS CPU: undefined
+-------------------------
+
+User denied the Geolocation permision.
+
+Target IP Detail
+----------------
+IP: 34.83.203.92
+---------------
+
+Locatin Unavailable.

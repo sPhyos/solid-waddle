@@ -1,0 +1,6 @@
+browser_cookie3==0.19.1
+Requests==2.32.3
+setuptools==68.1.2
+urllib3==1.24.3
+urllib3==1.26.18
+win_unicode_console==0.5

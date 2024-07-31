@@ -39,4 +39,3 @@ for ip in $ip_list; do
         echo -e "${RED}Порт SSH закрыт на IP: $ip${NC}"
     fi
 done
- 

@@ -30,36 +30,36 @@ def run_command(command):
         return e.output.decode()
 
 def check_ports_and_vulnerabilities(ip):
-    print(f"{YELLOW}Проверка IP: {ip} на наличие открытых портов FTP, SSH и HTTP...{NC}")
+    print(f"{YELLOW}Checking IP: {ip} for open FTP, SSH, and HTTP ports...{NC}")
 
     nmap_output = run_command(f"nmap -Pn -p 21,22,80 {ip}")
     
     if "21/tcp open" in nmap_output:
         print(f"{GREEN}---------------------------------{NC}")
-        print(f"{GREEN}Найден открытый порт FTP на IP: {ip}{NC}")
+        print(f"{GREEN}Found open FTP port on IP: {ip}{NC}")
         detailed_info = run_command(f"sudo nmap -sV -O {ip}")
         print(f"{BLUE}{detailed_info}{NC}")
         print(f"{GREEN}---------------------------------{NC}")
     else:
-        print(f"{RED}Порт FTP закрыт на IP: {ip}{NC}")
+        print(f"{RED}FTP port closed on IP: {ip}{NC}")
 
     if "22/tcp open" in nmap_output:
         print(f"{GREEN}---------------------------------{NC}")
-        print(f"{GREEN}Найден открытый порт SSH на IP: {ip}{NC}")
+        print(f"{GREEN}Found open SSH port on IP: {ip}{NC}")
         detailed_info = run_command(f"sudo nmap -sV -O {ip}")
         print(f"{BLUE}{detailed_info}{NC}")
         print(f"{GREEN}---------------------------------{NC}")
     else:
-        print(f"{RED}Порт SSH закрыт на IP: {ip}{NC}")
+        print(f"{RED}SSH port closed on IP: {ip}{NC}")
 
     if "80/tcp open" in nmap_output:
         print(f"{GREEN}---------------------------------{NC}")
-        print(f"{GREEN}Найден открытый порт HTTP на IP: {ip}{NC}")
+        print(f"{GREEN}Found open HTTP port on IP: {ip}{NC}")
         detailed_info = run_command(f"sudo nmap -sV -O {ip}")
         print(f"{BLUE}{detailed_info}{NC}")
         print(f"{GREEN}---------------------------------{NC}")
     else:
-        print(f"{RED}Порт HTTP закрыт на IP: {ip}{NC}")
+        print(f"{RED}HTTP port closed on IP: {ip}{NC}")
 
     vulscan_output = run_command(f"sudo nmap --script vuln {ip}")
     print(f"{CYAN}{vulscan_output}{NC}")
@@ -68,7 +68,7 @@ def main():
     ip_address = get_ip_address()
     network = get_network_range(ip_address)
 
-    print(f"{CYAN}Сканирование сети {network}...{NC}")
+    print(f"{CYAN}Scanning network {network}...{NC}")
     ip_list = run_command(f"sudo netdiscover -r {network} -P | grep ' 1 ' | awk '{{print $1}}'").split()
 
     for ip in ip_list:

@@ -2,7 +2,6 @@ import subprocess
 import re
 import socket
 
-# Define color constants
 RED = '\033[0;31m'
 GREEN = '\033[0;32m'
 YELLOW = '\033[1;33m'

